@@ -15,3 +15,5 @@ jobs:
         with:
           name: Linux-Commands
           path: main.pdf
+      - name: Display structure of downloaded files
+        run: ls -R
