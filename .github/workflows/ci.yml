@@ -1,8 +1,5 @@
 name: Build LaTeX document
-on: [push, pull_request_target]
-permissions:
-  contents: read
-  pull-requests: write
+on: [push]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -17,10 +14,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Linux-Commands
-          job_alias: latest
           path: main.pdf
       - name: Display structure of downloaded files
         run: ls -R
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
