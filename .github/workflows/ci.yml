@@ -23,4 +23,4 @@ jobs:
         run: ls -R
       - uses: actions/labeler@v4
         with:
-          repo-token: ${{ secrets.TESTE }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
