@@ -1,5 +1,8 @@
 name: Build LaTeX document
-on: [push]
+on: [push, pull_request_target]
+permissions:
+  contents: read
+  pull-requests: write
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -18,3 +21,9 @@ jobs:
           path: main.pdf
       - name: Display structure of downloaded files
         run: ls -R
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.TESTE }}
