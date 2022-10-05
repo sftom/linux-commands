@@ -14,6 +14,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Linux-Commands
+          job_alias: latest
           path: main.pdf
       - name: Display structure of downloaded files
         run: ls -R
