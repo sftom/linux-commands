@@ -14,4 +14,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Linux-Commands
-          path: public/main.pdf
+          path: main.pdf
